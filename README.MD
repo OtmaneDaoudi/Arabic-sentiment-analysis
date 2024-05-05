@@ -31,3 +31,10 @@ The Arabic Jordanian General Tweets (AJGT) Corpus consists of 1,800 tweets annot
 | Logistic regression | 78.71 | 82.28 | 73.03 | 77.38 |
 | SVM | 76.19 | 81.21 | 67.98 | 74.01 |
 | Random Forest | 79.83 | 79.44 | 80.34 | 79.89 |
+### BoC
+| Model| Accuracy (%) | Percision (%) | Recall (%) | F1 score (%)|
+| -| - | - | - | - |
+| NB | 62.18 | 90.57 | 26.97 | 41.56 |
+| Logistic regression | 80.39 | 81.40 | 78.65 | 80 |
+| SVM | 75.35 | 75.86 | 74.16 | 75 |
+| Random Forest | 73.67 | 74.14 | 72.47 | 73.3 |
