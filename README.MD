@@ -1,21 +1,21 @@
-# AJGT Dataset
-The Arabic Jordanian General Tweets (AJGT) Corpus consists of 1,800 tweets annotated as positive and negative, in modern standard arabic (MSA) and Jordanian dialect.
+# ASTC Dataset
+The Arabic Sentiment Twitter Corpus (ASTC) Corpus contains 58K Arabic tweets (47K training, 11K test) tweets annotated in positive and negative labels. The dataset is balanced and collected using positive and negative emojis lexicon.
 
 ## Performance evaluation
 ### Bag of words
 | Model| Accuracy (%) | Percision (%) | Recall (%) | F1 score (%)|
 | -| - | - | - | - |
-| NB | 78.43 | 73.06 | 80.9 | 80.6 |
-| Logistic regression | 84.59 | 86.39 | 82.02 | 84.15 |
-| SVM | 82.07 | 85.62 | 76.97 | 81.07 |
-| Random Forest | 78.15 | 81.25 | 73.03 | 76.92 |
+| NB | 61.63 | 68.27 | 40.32 | 50.70 |
+| Logistic regression | 90 | 86.49 | 92.77 | 89.52 |
+| SVM | 58.45 | 72.61 | 24.20 | 36.31 |
+| Random Forest | 88.87 | 86.01 | 92.25 | 89.02 |
 
 ### TF-IDF
 | Model| Accuracy (%) | Percision (%) | Recall (%) | F1 score (%)|
 | -| - | - | - | - |
-| NB | 76.75 | 72.51 | 85.96 | 78.66 |
-| Logistic regression | 84.03 | 86.23 | 80.90 | 83.48 |
-| SVM | 85.15 | 88.34 | 80.90 | 84.46 |
+| NB | 62.78 | 65.68 | 50.10 | 56.85 |
+| Logistic regression | 89.75 | 86.63 | 93.46 | 89.92 |
+| SVM | 54.10 | 65.30 | 13.21 | 13.21 |
 | Random Forest | 77.31 | 82.12 | 69.66 | 75.38 |
 ### LDA
 | Model| Accuracy (%) | Percision (%) | Recall (%) | F1 score (%)|

@@ -3,3 +3,4 @@ res.*
 aravec/*
 BoCEnv
 data/*
+preprocessed_data.*
