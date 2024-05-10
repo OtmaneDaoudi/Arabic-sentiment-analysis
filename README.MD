@@ -1,6 +1,2 @@
-# Datasets
-1. https://www.kaggle.com/datasets/mksaad/arabic-sentiment-twitter-corpus
-2. https://github.com/Mohabyoussef09/Arabic-Sentiment-Analysis/tree/master/Data
-
-# Stop words
-1. https://github.com/mohataher/arabic-stop-words
+# LABR: A Large-SCale Arabic Book Reviews Dataset
+This dataset contains over 63,000 book reviews in Arabic. It is the largest sentiment analysis dataset for Arabic to-date. The book reviews were harvested from the website Goodreads during the month or March 2013.
