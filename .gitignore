@@ -3,3 +3,5 @@ res.*
 aravec/*
 BoCEnv
 data/*
+models/*
+models.zip
