@@ -11,6 +11,7 @@ from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
 from sklearn.decomposition import LatentDirichletAllocation
 from sklearn.decomposition import TruncatedSVD
 
+
 def preprocess(text: str) -> str:
     # Normalize hamza
     pattern = r"أ|إ|آ"
@@ -32,35 +33,38 @@ def preprocess(text: str) -> str:
 
     return " ".join(text)
 
+
 def evaluate() -> str:
     text = document
     text = preprocess(text)
     print("preprocessed text : ", text)
 
     repres_to_dir = {
-        "Bag-of-words" : "BOW",
-        "TF-IDF" : "TFIDF",
-        "LDA" : "LDA",
-        "LSA" : "LSA",
-        "Bag-Of-Concepts" : "BOW"
+        "Bag-of-words": "BOW",
+        "TF-IDF": "TFIDF",
+        "LDA": "LDA",
+        "LSA": "LSA",
+        "Bag-Of-Concepts": "BOW"
     }
 
     model_to_dir = {
-        "Naive bayes" : "NB",
-        "Logistic regression" : "RF",
+        "Naive bayes": "NB",
+        "Logistic regression": "RF",
         "SVM": "SVM_Pipeline",
         "Random forest": "RF"
     }
 
     vectorizer_path = f"./models/ASTC/{repres_to_dir[representataion]}/vectorizer.pkl"
-    vectorizer: CountVectorizer | TfidfVectorizer = pickle.loads(open(vectorizer_path, 'rb').read())
+    vectorizer: CountVectorizer | TfidfVectorizer = pickle.loads(
+        open(vectorizer_path, 'rb').read())
 
     model_path = f"./models/ASTC/{repres_to_dir[representataion]}/{model_to_dir[model]}.pkl"
     model_: LogisticRegression = pickle.loads(
         open(model_path, 'rb').read())
 
     x = vectorizer.transform([text])
-    if representataion in ["Bag-of-words", "TF-IDF"]: x = x.toarray()
+    if representataion in ["Bag-of-words", "TF-IDF"]:
+        x = x.toarray()
     st.session_state["result"] = model_.predict(x)[0]
 
 
@@ -83,17 +87,17 @@ model = st.selectbox(label="Model", options=[
     "Random forest"
 ])
 
-btn = st.button(label="Evaluate", on_click = evaluate)
+btn = st.button(label="Evaluate", on_click=evaluate)
 
 try:
     if st.session_state.result:
         if st.session_state.result == "pos":
-            print("positive")
-            st.write("Positive")
+            st.markdown(
+                "<h2 style='text-align: center; color: lightgreen;'> Positive 😄 </h2>", unsafe_allow_html=True)
             st.session_state["result"] = None
         else:
-            print("negative")
-            st.write("negative")
+            st.markdown(
+                "<h2 style='text-align: center; color: #d4311c;'> Negative 😔 </h2>", unsafe_allow_html=True)
             st.session_state["result"] = None
 except:
     pass
