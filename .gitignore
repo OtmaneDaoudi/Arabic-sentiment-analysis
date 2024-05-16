@@ -6,3 +6,4 @@ data/*
 models/*
 models.zip
 preprocessed_data.csv
+__pycache__/*
