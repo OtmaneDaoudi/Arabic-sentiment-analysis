@@ -1,15 +1,13 @@
-import streamlit as st
-import pandas as pd
-
 import re
 import pickle
+
+import streamlit as st
 
 from snowballstemmer import stemmer
 from pyarabic.araby import tokenize
 from sklearn.linear_model import LogisticRegression
 from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
-from sklearn.decomposition import LatentDirichletAllocation
-from sklearn.decomposition import TruncatedSVD
+from appraisal import AppraisalUtils
 
 
 def preprocess(text: str) -> str:
@@ -44,7 +42,8 @@ def evaluate() -> str:
         "TF-IDF": "TFIDF",
         "LDA": "LDA",
         "LSA": "LSA",
-        "Bag-Of-Concepts": "BOW"
+        "Bag-Of-Concepts": "BOW",
+        "Bag-of-words w/ Appraisal": "APPRAISAL"
     }
 
     model_to_dir = {
@@ -74,6 +73,7 @@ def evaluate() -> str:
 document = st.text_input(label="Text to analyze :")
 representataion = st.selectbox(label="Text representation", options=[
     "Bag-of-words",
+    "Bag-of-words w/ Appraisal",
     "TF-IDF",
     "LDA",
     "LSA",
