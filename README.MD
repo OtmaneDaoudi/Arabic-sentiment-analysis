@@ -1,7 +1,7 @@
-# ASTC Dataset
-The Arabic Sentiment Twitter Corpus (ASTC) Corpus contains 58K Arabic tweets (47K training, 11K test) tweets annotated in positive and negative labels. The dataset is balanced and collected using positive and negative emojis lexicon.
+This branch contains the implmentation of appraisal theory based on the following paper : [Using Appraisal Groups for Sentiment Analysis](https://www.researchgate.net/publication/200044325_Using_appraisal_groups_for_sentiment_analysis)
 
 ## Performance evaluation
+The results we obtained on the AGJT dataset are the following:
 ### G:AO
 | Model| Accuracy (%) | Percision (%) | Recall (%) | F1 score (%)|
 | -| - | - | - | - |
