@@ -1,5 +1,4 @@
-# BERT
-Sentiment analysis on different datasets using BERT.
+This branch contains the code for sentiment analysis using the BERT model.
 
 <a id="3"> </a>
 ## Results
