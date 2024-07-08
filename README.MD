@@ -1,7 +1,7 @@
 This branch contains the code for sentiment analysis using the BERT model.
 
 <a id="3"> </a>
-## Results
+#Performance evaluation
 
 | model | with emojis| training dataset  |  arabic-sentiment-twitter-corpus accuracy | SS2030 accuracy | 100k reviews accuracy  
 | :---: | :---: | :---: |  :---: | :---: | :---:
